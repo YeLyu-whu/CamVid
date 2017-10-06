@@ -234,7 +234,7 @@ class BatchDataReader:
         batch_lbl = []
         for i in range(self._batch_offset,self._batch_offset+batch_size):
             if i>=totalSamplesNum:
-                return None
+                return None,None
                 break
             print(i)
             img,lbl = getImgLblDataPair(self._ImgList,self._LblList,self._indexListForReader[i])
