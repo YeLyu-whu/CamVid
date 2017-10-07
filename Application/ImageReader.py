@@ -236,7 +236,7 @@ class BatchDataReader:
             if i>=totalSamplesNum:
                 return None,None
                 break
-            print(i)
+            print("sample %d"%i)
             img,lbl = getImgLblDataPair(self._ImgList,self._LblList,self._indexListForReader[i])
             img,lbl = transformImgPairsToTrainableType(img,lbl,self._colorList)
             batch_img.append(img)
